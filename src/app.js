@@ -8,4 +8,4 @@ app.use(express.json());
 app.use(router);
 
 
-app.listen(proocess.env.PORT, () => console.log(`Rodando servidor na porta ${process.env.PORT}`));
+app.listen(process.env.PORT, () => console.log(`Rodando servidor na porta ${process.env.PORT}`));
