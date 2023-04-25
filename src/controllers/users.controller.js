@@ -26,7 +26,6 @@ export async function signIn(req, res) {
         if (!user) return res.status(401).send("E-mail não cadastrado.");
 
         const passwordIsCorrect = bcrypt.compareSync(password, user.password);
-        console.log(passwordIsCorrect)
         if (!passwordIsCorrect) return res.status(401).send("Senha incorreta");
 
         const token = uuid();
